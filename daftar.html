@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar Anggota - Perpustakaan Kelas TI-2A</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  
+  <header class="header-publik">
+    <a href="login.html" class="logo">
+      <span class="ikon">▤</span>
+      <span><strong>Perpustakaan</strong><small>KELAS TI–2A</small></span>
+    </a>
+    <div class="nav-publik">
+      <a href="katalog.html">Tampilan Anggota</a>
+      <span>|</span> <span>Sudah punya akun?</span> <a href="login.html" class="tombol"><b>Masuk</b></a>
+    </div>
+  </header>
+
+  <main class="isi-publik">
+    <p class="label-kecil">Perpustakaan Kelas IF-C</p>
+    <h1 class="judul-besar">Mulai akses koleksi<br>perpustakaan kelas.</h1>
+    <p class="muted" style="margin-bottom: 30px;">Daftarkan diri sebagai anggota untuk melihat katalog dan ketersediaan buku di Perpustakaan Kelas TI–2A.</p>
+
+    <div class="kartu" style="max-width: 534px;">
+      <div class="kartu-isi" style="padding: 26px;">
+        <h2>Daftar anggota</h2>
+        <p class="muted" style="margin: 8px 0 24px;">Lengkapi data diri untuk membuat akun perpustakaan.</p>
+
+        <form action="login.html" method="get">
+          <div class="grup">
+            <label for="nama">Nama lengkap</label>
+            <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap">
+          </div>
+
+          <div class="baris-2 grup">
+            <div>
+              <label for="nim">NIM</label>
+              <input type="text" id="nim" name="nim" placeholder="Masukkan NIM">
+            </div>
+            <div>
+              <label for="kelas">Kelas</label>
+              <input type="text" id="kelas" name="kelas" value="IF-C" readonly>
+            </div>
+          </div>
+
+          <div class="baris-2 grup">
+            <div>
+              <label for="email">Alamat email</label>
+              <input type="email" id="email" name="email" placeholder="nama@email.com">
+            </div>
+            <div>
+              <label for="telp">Nomor telepon</label>
+              <input type="tel" id="telp" name="telp" placeholder="08xxxxxxxxxx">
+            </div>
+          </div>
+
+          <div class="baris-2">
+            <div class="grup">
+              <label for="sandi">Kata sandi</label>
+              <input type="password" id="sandi" name="sandi" placeholder="Buat kata sandi" minlength="8">
+            </div>
+            <div class="grup">
+              <label for="ulang">Konfirmasi kata sandi</label>
+              <input type="password" id="ulang" name="ulang" placeholder="Ulangi kata sandi" minlength="8">
+            </div>
+          </div>
+          <p class="muted kecil" style="margin: -8px 0 16px;">Gunakan minimal 8 karakter untuk kata sandi Anda.</p>
+
+          <label class="centang" for="benar" style="margin-bottom: 20px;">
+            <input type="checkbox" id="benar"> Saya memastikan data yang diisi sudah benar.
+          </label>
+
+          <button type="submit" class="tombol tombol-gelap tombol-penuh">Daftar anggota</button>
+        </form>
+
+        <p class="muted" style="text-align: center; margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--garis);">
+          Sudah punya akun? <a href="login.html"><b>Masuk di sini</b></a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer-publik">
+    <span>© 2026 Perpustakaan Kelas TI–2A</span>
+    <span>Butuh bantuan? Hubungi petugas perpustakaan.</span>
+  </footer>
+
+</body>
+</html>

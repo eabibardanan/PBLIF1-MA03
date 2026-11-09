@@ -1,0 +1,682 @@
+
+:root {
+  --gelap: #2d2d2d;      
+  --teks: #222222;
+  --abu-teks: #666666;   
+  --garis: #d9d9d9;      
+  --abu-muda: #ececec;   
+  --latar: #f5f5f5;      
+  --putih: #ffffff;
+}
+
+* {
+  box-sizing: border-box;  
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: var(--teks);
+  background: var(--latar);
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+a {
+  color: var(--teks);
+}
+
+.muted {
+  color: var(--abu-teks);
+}
+
+.kecil {
+  font-size: 12px;
+}
+
+
+.header-publik {
+  background: var(--putih);
+  border-bottom: 1px solid var(--garis);
+  padding: 18px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.logo .ikon {
+  width: 34px;
+  height: 34px;
+  background: var(--abu-muda);
+  border: 1px solid var(--garis);
+  border-radius: 4px;
+  text-align: center;
+  line-height: 32px;
+}
+
+.logo strong {
+  display: block;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.logo small {
+  color: var(--abu-teks);
+  font-size: 11px;
+}
+
+
+.nav-publik {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: var(--abu-teks);
+}
+
+.nav-publik a {
+  color: var(--abu-teks);
+  text-decoration: none;
+}
+
+
+.isi-publik {
+  padding: 60px;
+  min-height: calc(100vh - 140px);
+}
+
+.label-kecil {
+  font-size: 11px;
+  font-weight: bold;
+  color: var(--abu-teks);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.judul-besar {
+  font-size: 30px;
+  line-height: 1.25;
+  margin-bottom: 16px;
+}
+
+
+.login-grid {
+  display: grid;
+  grid-template-columns: 300px 350px;
+  gap: 40px;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.daftar-peran {
+  border-top: 1px solid var(--garis);
+  margin-top: 24px;
+  padding-top: 24px;
+}
+
+.peran {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.peran .ikon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  background: var(--abu-muda);
+  border-radius: 4px;
+  text-align: center;
+  line-height: 28px;
+}
+
+.peran strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+
+.footer-publik {
+  background: var(--putih);
+  border-top: 1px solid var(--garis);
+  padding: 22px 60px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--abu-teks);
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+
+.sidebar {
+  width: 232px;
+  flex-shrink: 0;
+  background: var(--putih);
+  border-right: 1px solid var(--garis);
+  padding: 20px 20px;
+}
+
+.sidebar .logo {
+  margin-bottom: 26px;
+}
+
+.judul-menu {
+  font-size: 11px;
+  color: var(--abu-teks);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.sidebar nav a {
+  display: block;
+  padding: 11px 14px;
+  margin-bottom: 4px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+
+.sidebar nav a.aktif {
+  background: var(--abu-muda);
+}
+
+
+.kotak-peran {
+  margin-top: 36px;
+  border: 1px solid var(--garis);
+  background: var(--latar);
+  border-radius: 4px;
+  padding: 14px;
+  font-size: 12px;
+  color: var(--abu-teks);
+}
+
+.kotak-peran strong {
+  display: block;
+  color: var(--teks);
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.sidebar .semester {
+  margin-top: 28px;
+  font-size: 12px;
+  color: var(--abu-teks);
+}
+
+/* --- Area kanan --- */
+.utama {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Bar atas: breadcrumb kiri, tanggal & nama kanan */
+.topbar {
+  background: var(--putih);
+  border-bottom: 1px solid var(--garis);
+  padding: 18px 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar .kanan {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.topbar .pengguna {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Lingkaran inisial (RP, CN) */
+.avatar {
+  width: 26px;
+  height: 26px;
+  background: var(--abu-muda);
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 26px;
+}
+
+.konten {
+  padding: 36px;
+}
+
+/* Judul halaman + tombol di kanan */
+.judul-halaman {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.judul-halaman h1 {
+  font-size: 28px;
+  font-weight: normal;
+  margin-bottom: 8px;
+}
+
+/* Susunan dua kolom: kiri lebar, kanan sempit */
+.dua-kolom {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 24px;
+  align-items: start;
+}
+
+.dua-kolom.lebar-kanan-310 {
+  grid-template-columns: 1fr 310px;
+}
+
+/* Dua kartu sejajar */
+.sejajar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.tumpuk > * {
+  margin-bottom: 20px;
+}
+
+
+/* ---------- 4. KOMPONEN ---------- */
+
+/* --- Kartu putih --- */
+.kartu {
+  background: var(--putih);
+  border: 1px solid var(--garis);
+  border-radius: 6px;
+}
+
+.kartu-kepala {
+  padding: 18px 22px;
+  border-bottom: 1px solid var(--garis);
+}
+
+.kartu-kepala h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.kartu-isi {
+  padding: 22px;
+}
+
+.kartu-kaki {
+  padding: 16px 22px;
+  border-top: 1px solid var(--garis);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--abu-teks);
+}
+
+/* --- Tombol --- */
+.tombol {
+  display: inline-block;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--teks);
+  background: var(--putih);
+  border: 1px solid var(--garis);
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.tombol-gelap {
+  background: var(--gelap);
+  border-color: var(--gelap);
+  color: var(--putih);
+}
+
+.tombol-penuh {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 14px;
+}
+
+/* Tombol yang tidak bisa diklik */
+.tombol[disabled],
+.tombol.mati {
+  color: #999;
+  background: var(--abu-muda);
+  cursor: not-allowed;
+}
+
+/* --- Kotak ringkasan angka --- */
+.statistik {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.statistik .kotak {
+  background: var(--putih);
+  border: 1px solid var(--garis);
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.statistik .angka {
+  font-size: 32px;
+  margin: 10px 0;
+}
+
+/* --- Kotak info abu-abu --- */
+.info {
+  background: var(--abu-muda);
+  border: 1px solid var(--garis);
+  border-radius: 6px;
+  padding: 16px 20px;
+  display: flex;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.info strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.info .muted {
+  line-height: 1.5;
+}
+
+/* --- Form --- */
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  font-family: inherit;
+  background: var(--putih);
+  border: 1px solid var(--garis);
+  border-radius: 4px;
+}
+
+/* Isian yang dikunci (tidak bisa diubah) */
+input[readonly] {
+  background: var(--abu-muda);
+  color: var(--abu-teks);
+}
+
+.grup {
+  margin-bottom: 18px;
+}
+
+.grup .bantuan {
+  font-size: 12px;
+  color: var(--abu-teks);
+  margin-top: 6px;
+}
+
+/* Dua isian sebaris */
+.baris-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.baris-tombol {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.centang {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: normal;
+}
+
+.centang input {
+  width: auto;
+}
+
+/* Checkbox yang sebaris dengan teks lain tidak perlu jarak bawah */
+.rincian .centang {
+  margin-bottom: 0;
+}
+
+/* --- Kolom pencarian --- */
+.pencarian {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.pencarian input {
+  flex: 1;
+}
+
+.pencarian select {
+  width: auto;
+}
+
+/* --- Tabel --- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: var(--abu-muda);
+  text-align: left;
+  font-size: 12px;
+  padding: 14px 16px;
+}
+
+td {
+  padding: 16px;
+  border-bottom: 1px solid var(--garis);
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Baris yang sedang dipilih */
+tr.dipilih td {
+  background: var(--latar);
+}
+
+td small {
+  display: block;
+  color: var(--abu-teks);
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+/* Link aksi: Ubah (tebal) dan Hapus (pudar) */
+.aksi a {
+  margin-right: 12px;
+  font-size: 13px;
+}
+
+.aksi .hapus {
+  color: var(--abu-teks);
+}
+
+/* --- Badge status --- */
+.badge {
+  display: inline-block;
+  padding: 3px 8px;
+  font-size: 11px;
+  font-weight: bold;
+  background: var(--abu-muda);
+  border: 1px solid var(--garis);
+  border-radius: 3px;
+}
+
+/* Status penting (Terlambat, Stok habis) diberi garis tebal */
+.badge.penting {
+  border: 2px solid #555;
+}
+
+/* --- Tab / tombol filter --- */
+.tab {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.tab a {
+  padding: 9px 14px;
+  border: 1px solid var(--garis);
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.tab a.aktif {
+  background: var(--gelap);
+  border-color: var(--gelap);
+  color: var(--putih);
+}
+
+/* --- Nomor halaman --- */
+.paging {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--abu-teks);
+}
+
+.paging .nomor {
+  padding: 6px 10px;
+  background: var(--abu-muda);
+  border-radius: 3px;
+  color: var(--teks);
+}
+
+/* --- Baris "label ... nilai" di kartu ringkasan --- */
+.rincian {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.rincian b {
+  text-align: right;
+}
+
+/* Rincian bertumpuk (label di atas, nilai di bawah) */
+.rincian-atas {
+  margin-bottom: 14px;
+}
+
+.rincian-atas small {
+  display: block;
+  color: var(--abu-teks);
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+
+.rincian-atas b {
+  font-size: 14px;
+}
+
+/* Strip angka di bawah judul halaman Buku */
+.ringkas-baris {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 18px;
+  color: var(--abu-teks);
+}
+
+.ringkas-baris b {
+  color: var(--teks);
+}
+
+/* --- Daftar pilihan buku (dropdown terbuka) --- */
+.dropdown {
+  border: 1px solid var(--garis);
+  border-radius: 4px;
+  margin: -8px 0 18px;
+  padding: 8px;
+}
+
+.dropdown .cari {
+  margin-bottom: 8px;
+}
+
+.dropdown .opsi {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+}
+
+.dropdown .opsi.dipilih {
+  background: var(--abu-muda);
+  font-weight: bold;
+}
+
+.dropdown .opsi.mati {
+  color: #999;
+}
+
+/* --- Grafik batang sederhana (halaman laporan) --- */
+.batang-wadah {
+  height: 5px;
+  background: var(--abu-muda);
+  border-radius: 3px;
+  margin-top: 8px;
+}
+
+.batang {
+  height: 5px;
+  background: #777;
+  border-radius: 3px;
+}
+
+.item-batang {
+  margin-bottom: 18px;
+}
+
+.item-batang .atas {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-batang small {
+  color: var(--abu-teks);
+  font-size: 11px;
+}
+
+/* Judul besar di kartu info buku (katalog) */
+.judul-buku {
+  font-size: 24px;
+  margin: 6px 0;
+}

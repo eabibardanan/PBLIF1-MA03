@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katalog Buku - Perpustakaan Kelas TI-2A</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="layout">
+
+    <aside class="sidebar">
+      <a href="katalog.html" class="logo">
+        <span class="ikon">▤</span>
+        <span><strong>Perpustakaan</strong><small>KELAS TI–2A</small></span>
+      </a>
+
+      <p class="judul-menu">Akses anggota</p>
+      <nav>
+        <a href="katalog.html" class="aktif">Katalog buku</a>
+      </nav>
+
+      <div class="kotak-peran">
+        <strong>Anggota / Mahasiswa</strong>
+        Lihat informasi dan ketersediaan buku. Pengajuan pinjam melalui petugas.
+      </div>
+
+      <p class="semester">Semester ganjil 2026/2027</p>
+    </aside>
+
+    <div class="utama">
+
+      <div class="topbar">
+        <span class="muted">Perpustakaan kelas / Katalog buku</span>
+        <div class="kanan">
+          <span class="muted">Kamis, 22 Oktober 2026</span>
+          <span class="pengguna"><span class="avatar">DS</span> Daniel Siagian</span>
+          </span> <a href="daftar.html" class="tombol"><b>Keluar</b></a>
+        </div>
+      </div>
+
+      <main class="konten">
+
+        <div class="judul-halaman">
+          <div>
+            <h1>Katalog buku</h1>
+            <p class="muted">Temukan bacaan dan periksa ketersediaan buku perpustakaan kelas.</p>
+          </div>
+        </div>
+
+        <div class="info">
+          <span>▤</span>
+          <div>
+            <strong>Akses anggota · Informasi dan ketersediaan buku</strong>
+            <span class="muted">Katalog bersifat hanya-baca. Untuk meminjam atau mengembalikan buku, silakan hubungi petugas perpustakaan kelas.</span>
+          </div>
+        </div>
+
+        <div class="dua-kolom lebar-kanan-310">
+
+          <div class="kartu">
+            <div class="kartu-isi" style="padding-bottom: 8px;">
+              <form class="pencarian" style="flex-direction: column;">
+                <input type="text" placeholder=" Cari judul, penulis, kategori, atau kode buku...">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                  <select><option>Semua kategori</option><option>Fiksi</option><option>Pengembangan diri</option><option>Teknologi</option><option>Sejarah</option></select>
+                  <span class="muted">6 judul · 11 eksemplar tersedia</span>
+                </div>
+              </form>
+            </div>
+            <table>
+              <thead><tr><th>Kode</th><th>Judul / penulis</th><th>Kategori</th><th>Tahun</th><th>Tersedia</th><th>Info</th></tr></thead>
+              <tbody>
+            <tr class="dipilih">
+              <td>BK-001</td>
+              <td>Laskar Pelangi<small>Andrea Hirata</small></td>
+              <td>Fiksi</td><td>2005</td>
+              <td><b>3 dari 4</b><small>Tersedia</small></td>
+              <td><a href="katalog.html">Lihat</a></td>
+            </tr>
+            <tr>
+              <td>BK-002</td>
+              <td>Bumi Manusia<small>Pramoedya Ananta Toer</small></td>
+              <td>Fiksi</td><td>1980</td>
+              <td><b>2 dari 3</b><small>Tersedia</small></td>
+              <td><a href="katalog.html">Lihat</a></td>
+            </tr>
+            <tr>
+              <td>BK-003</td>
+              <td>Filosofi Teras<small>Henry Manampiring</small></td>
+              <td>Pengembangan diri</td><td>2018</td>
+              <td><b>2 dari 2</b><small>Tersedia</small></td>
+              <td><a href="katalog.html">Lihat</a></td>
+            </tr>
+            <tr>
+              <td>BK-004</td>
+              <td>Atomic Habits<small>James Clear</small></td>
+              <td>Pengembangan diri</td><td>2018</td>
+              <td><b>1 dari 2</b><small>Tersedia</small></td>
+              <td><a href="katalog.html">Lihat</a></td>
+            </tr>
+            <tr>
+              <td>BK-005</td>
+              <td>Dasar Pemrograman Python<small>Budi Raharjo</small></td>
+              <td>Teknologi</td><td>2018</td>
+              <td><b>0 dari 1</b><small>Stok habis</small></td>
+              <td><a href="katalog.html">Lihat</a></td>
+            </tr>
+            <tr>
+              <td>BK-006</td>
+              <td>Sejarah Indonesia<small>M. C. Ricklefs</small></td>
+              <td>Sejarah</td><td>2008</td>
+              <td><b>3 dari 3</b><small>Tersedia</small></td>
+              <td><a href="katalog.html">Lihat</a></td>
+            </tr>
+              </tbody>
+            </table>
+            <div class="kartu-kaki">
+              <span>Menampilkan 1–6 dari 6 judul buku</span>
+              <span class="paging">Sebelumnya <span class="nomor">1</span> Berikutnya</span>
+            </div>
+          </div>
+
+
+          <div class="tumpuk">
+            <div class="kartu">
+              <div class="kartu-kepala">
+                <h3>Informasi buku</h3>
+                <p class="muted">Buku yang dipilih dari katalog</p>
+              </div>
+              <div class="kartu-isi">
+                <p class="muted kecil">BK-001</p>
+                <h2 class="judul-buku">Laskar Pelangi</h2>
+                <p class="muted" style="margin-bottom: 14px;">Andrea Hirata</p>
+                <p style="margin-bottom: 18px;"><span class="badge">Tersedia</span></p>
+                <div class="rincian"><span class="muted">Kategori</span><b>Fiksi</b></div>
+                <div class="rincian"><span class="muted">Tahun terbit</span><b>2005</b></div>
+                <div class="rincian"><span class="muted">Jumlah koleksi</span><b>4 eksemplar</b></div>
+                <div class="rincian"><span class="muted">Sedang dipinjam</span><b>1 eksemplar</b></div>
+                <div class="rincian"><span class="muted">Dapat dipinjam</span><b>3 eksemplar</b></div>
+                <p class="muted kecil" style="margin-top: 18px; line-height: 1.5;">Ketersediaan per 22 Oktober 2026. Stok dapat berubah ketika petugas mencatat transaksi.</p>
+              </div>
+            </div>
+
+            <div class="kartu">
+              <div class="kartu-kepala"><h3>Ingin meminjam buku?</h3></div>
+              <div class="kartu-isi muted kecil" style="line-height: 1.5;">
+                <p style="margin-bottom: 12px;">Sampaikan kode buku dan kartu anggota kepada petugas. Petugas akan memeriksa stok serta mencatat tanggal pinjam dan jatuh tempo.</p>
+                <p>Buku dengan stok 0 belum dapat dipinjam. Silakan periksa kembali setelah buku dikembalikan.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </main>
+
+    </div>
+  </div>
+
+</body>
+</html>

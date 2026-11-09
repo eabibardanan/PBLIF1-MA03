@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peminjaman - Perpustakaan Kelas TI-2A</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <a href="dashboard.html" class="logo">
+        <span class="ikon">▤</span>
+        <span><strong>Perpustakaan</strong><small>KELAS TI–2A</small></span>
+      </a>
+
+      <p class="judul-menu">Ruang petugas</p>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="buku.html">Buku</a>
+        <a href="anggota.html">Anggota</a>
+        <a href="peminjaman.html" class="aktif">Peminjaman</a>
+        <a href="pengembalian.html">Pengembalian</a>
+        <a href="laporan.html">Laporan</a>
+      </nav>
+
+      <div class="kotak-peran">
+        <strong>Petugas perpustakaan</strong>
+        Kelola buku, anggota, transaksi, dan laporan kelas.
+      </div>
+
+      <p class="semester">Semester ganjil 2026/2027</p>
+    </aside>
+
+    <div class="utama">
+      <div class="topbar">
+        <span class="muted">Ruang petugas / Peminjaman</span>
+        <div class="kanan">
+          <span class="muted">Kamis, 22 Oktober 2026</span>
+          <span class="pengguna"><span class="avatar">RP</span> Rani · Petugas</span>
+        </div>
+      </div>
+
+      <main class="konten">
+
+        <div class="judul-halaman">
+          <div>
+            <h1>Peminjaman</h1>
+            <p class="muted">Catat peminjaman baru. Satu transaksi mencatat satu eksemplar buku.</p>
+          </div>
+          <a href="pengembalian.html" class="tombol">→ Lihat transaksi aktif</a>
+        </div>
+
+        <div class="dua-kolom lebar-kanan-310" style="grid-template-columns: 1fr 330px;">
+
+          <!-- Kiri: form transaksi baru -->
+          <div class="kartu">
+            <div class="kartu-kepala">
+              <h3>Transaksi baru</h3>
+              <p class="muted kecil">PJ-009 · Draf belum disimpan · * Isian wajib</p>
+            </div>
+            <form action="pengembalian.html" method="get">
+              <div class="kartu-isi">
+
+                <div class="grup">
+                  <label for="anggota">Anggota / peminjam *</label>
+                  <select id="anggota">
+                    <option>AG-001 · Alya Putri · 260101001</option>
+                    <option>AG-002 · Bima Pratama · 260101002</option>
+                    <option>AG-003 · Citra Nabila · 260101003</option>
+                    <option>AG-004 · Dimas Saputra · 260101004</option>
+                    <option>AG-005 · Eka Lestari · 260101005</option>
+                    <option selected>AG-006 · Farhan Akbar · 260101006</option>
+                  </select>
+                  <p class="bantuan">Cari anggota berdasarkan nama, NIM, atau kode. Kelas TI–2A.</p>
+                </div>
+
+                <div class="grup">
+                  <label for="buku">Buku *</label>
+                  <select id="buku">
+                    <option selected>BK-001 · Laskar Pelangi</option>
+                    <option>BK-002 · Bumi Manusia</option>
+                    <option>BK-003 · Filosofi Teras</option>
+                    <option>BK-004 · Atomic Habits</option>
+                    <option disabled>BK-005 · Dasar Pemrograman Python (stok 0)</option>
+                    <option>BK-006 · Sejarah Indonesia</option>
+                  </select>
+                </div>
+
+                <div class="dropdown">
+                  <input type="text" class="cari" placeholder="🔍 Cari judul, penulis, kategori, atau kode...">
+                  <div class="opsi dipilih"><span>BK-001 · Laskar Pelangi</span><span>3 tersedia · dipilih</span></div>
+                  <div class="opsi"><span>BK-002 · Bumi Manusia</span><span>2 tersedia</span></div>
+                  <div class="opsi mati"><span>BK-005 · Dasar Pemrograman Python</span><span>Stok 0 · tidak dapat dipilih</span></div>
+                </div>
+
+                <div class="baris-2 grup">
+                  <div><label for="pinjam">Tanggal pinjam *</label><input type="date" id="pinjam" value="2026-10-22"></div>
+                  <div><label for="tempo">Tanggal jatuh tempo *</label><input type="date" id="tempo" value="2026-10-29" min="2026-10-22"></div>
+                </div>
+
+                <div class="info" style="margin-bottom: 0;">
+                  <span>✓</span>
+                  <div>
+                    <strong>Stok tersedia — peminjaman dapat dicatat</strong>
+                    <span class="muted kecil">Laskar Pelangi: 3 eksemplar tersedia. Setelah transaksi disimpan, sisa stok tersedia menjadi 2 eksemplar.</span>
+                  </div>
+                </div>
+              </div>
+              <div class="kartu-kaki" style="color: inherit;">
+                <a href="dashboard.html" class="tombol">Batal</a>
+                <button type="submit" class="tombol tombol-gelap">✓ Simpan peminjaman</button>
+              </div>
+            </form>
+          </div>
+
+          <div>
+            <div class="kartu tumpuk-item" style="margin-bottom: 20px;">
+              <div class="kartu-kepala"><h3>Ringkasan peminjaman</h3></div>
+              <div class="kartu-isi">
+                <p style="margin-bottom: 16px;"><span class="badge">Draf</span></p>
+                <div class="rincian-atas"><small>Kode transaksi</small><b>PJ-009 (otomatis)</b></div>
+                <div class="rincian-atas"><small>Peminjam</small><b>Farhan Akbar · AG-006</b></div>
+                <div class="rincian-atas"><small>Buku</small><b>Laskar Pelangi · BK-001</b></div>
+                <div class="rincian-atas"><small>Jumlah</small><b>1 eksemplar</b></div>
+                <div class="rincian-atas"><small>Durasi</small><b>7 hari · 22–29 Oktober 2026</b></div>
+                <p class="muted kecil">Draf ini belum masuk ke dashboard, stok, atau laporan.</p>
+              </div>
+            </div>
+
+            <div class="kartu">
+              <div class="kartu-kepala"><h3>Jika stok buku habis</h3></div>
+              <div class="kartu-isi">
+                <p style="margin-bottom: 10px;"><b>BK-005 · Dasar Pemrograman Python</b></p>
+                <p class="muted kecil" style="margin-bottom: 14px; line-height: 1.5;">Seluruh eksemplar sedang dipinjam. Opsi buku dinonaktifkan dan peminjaman tidak dapat disimpan untuk buku ini.</p>
+                <button class="tombol" disabled>Simpan peminjaman</button>
+              </div>
+            </div>
+
+            <p class="muted" style="margin-top: 16px; line-height: 1.5;">Jatuh tempo harus sama atau setelah tanggal pinjam. Saat disimpan, status menjadi Dipinjam dan stok tersedia berkurang 1.</p>
+          </div>
+
+        </div>
+
+      </main>
+
+    </div>
+  </div>
+
+</body>
+</html>

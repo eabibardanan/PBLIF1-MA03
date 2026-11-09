@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pengembalian - Perpustakaan Kelas TI-2A</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="layout">
+
+
+    <aside class="sidebar">
+      <a href="dashboard.html" class="logo">
+        <span class="ikon">▤</span>
+        <span><strong>Perpustakaan</strong><small>KELAS TI–2A</small></span>
+      </a>
+
+      <p class="judul-menu">Ruang petugas</p>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="buku.html">Buku</a>
+        <a href="anggota.html">Anggota</a>
+        <a href="peminjaman.html">Peminjaman</a>
+        <a href="pengembalian.html" class="aktif">Pengembalian</a>
+        <a href="laporan.html">Laporan</a>
+      </nav>
+
+      <div class="kotak-peran">
+        <strong>Petugas perpustakaan</strong>
+        Kelola buku, anggota, transaksi, dan laporan kelas.
+      </div>
+
+      <p class="semester">Semester ganjil 2026/2027</p>
+    </aside>
+
+    <div class="utama">
+      <div class="topbar">
+        <span class="muted">Ruang petugas / Pengembalian</span>
+        <div class="kanan">
+          <span class="muted">Kamis, 22 Oktober 2026</span>
+          <span class="pengguna"><span class="avatar">RP</span> Rani · Petugas</span>
+        </div>
+      </div>
+
+      <main class="konten">
+
+        <div class="judul-halaman">
+          <div>
+            <h1>Pengembalian</h1>
+            <p class="muted">Temukan transaksi, periksa buku yang diterima, lalu catat pengembalian.</p>
+          </div>
+        </div>
+
+        <div class="info">
+          <span>✓</span>
+          <div>
+            <strong>Pengembalian PJ-004 berhasil dicatat</strong>
+            <span class="muted">Farhan Akbar · Laskar Pelangi · 22 Oktober 2026. Status berubah dari Dipinjam menjadi Dikembalikan. Stok tersedia BK-001 bertambah dari 2 menjadi 3.</span>
+          </div>
+        </div>
+
+        <div class="kartu">
+          <div class="kartu-isi" style="padding-bottom: 8px;">
+            <form class="pencarian">
+              <input type="text" placeholder="🔍 Cari kode transaksi, nama peminjam, atau status...">
+              <select><option>Semua status</option><option>Dipinjam</option><option>Terlambat</option><option>Dikembalikan</option></select>
+            </form>
+            <div class="tab">
+              <a href="#" class="aktif">Aktif (4)</a>
+              <a href="#">Dikembalikan (4)</a>
+              <a href="#">Semua transaksi (8)</a>
+            </div>
+          </div>
+          <table>
+            <thead><tr><th>Transaksi</th><th>Peminjam</th><th>Buku</th><th>Tgl pinjam</th><th>Jatuh tempo</th><th>Status</th><th>Aksi</th></tr></thead>
+            <tbody>
+            <tr>
+              <td>PJ-008</td><td>Citra Nabila</td>
+              <td>Laskar Pelangi<small>BK-001 · 1 eksemplar</small></td>
+              <td>21 Okt 2026</td><td>28 Okt 2026</td>
+              <td><span class="badge">Dipinjam</span></td>
+              <td class="aksi">
+                <a href="pengembalian.html" class="tombol">Kembalikan</a>
+                <div style="margin-top: 8px;"><a href="peminjaman.html"><b>Ubah</b></a><a href="#" class="hapus">Hapus</a></div>
+              </td>
+            </tr>
+            <tr>
+              <td>PJ-007</td><td>Dimas Saputra</td>
+              <td>Atomic Habits<small>BK-004 · 1 eksemplar</small></td>
+              <td>20 Okt 2026</td><td>27 Okt 2026</td>
+              <td><span class="badge">Dipinjam</span></td>
+              <td class="aksi">
+                <a href="pengembalian.html" class="tombol">Kembalikan</a>
+                <div style="margin-top: 8px;"><a href="peminjaman.html"><b>Ubah</b></a><a href="#" class="hapus">Hapus</a></div>
+              </td>
+            </tr>
+            <tr>
+              <td>PJ-006</td><td>Bima Pratama</td>
+              <td>Dasar Pemrograman Python<small>BK-005 · 1 eksemplar</small></td>
+              <td>15 Okt 2026</td><td>21 Okt 2026</td>
+              <td><span class="badge penting">Terlambat</span></td>
+              <td class="aksi">
+                <a href="pengembalian.html" class="tombol">Kembalikan</a>
+                <div style="margin-top: 8px;"><a href="peminjaman.html"><b>Ubah</b></a><a href="#" class="hapus">Hapus</a></div>
+              </td>
+            </tr>
+            <tr>
+              <td>PJ-005</td><td>Alya Putri</td>
+              <td>Bumi Manusia<small>BK-002 · 1 eksemplar</small></td>
+              <td>12 Okt 2026</td><td>19 Okt 2026</td>
+              <td><span class="badge penting">Terlambat</span><small>3 hari terlambat</small></td>
+              <td class="aksi">
+                <a href="pengembalian.html" class="tombol">Kembalikan</a>
+                <div style="margin-top: 8px;"><a href="peminjaman.html"><b>Ubah</b></a><a href="#" class="hapus">Hapus</a></div>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+          <div class="kartu-kaki">
+            <span>Menampilkan 1–4 dari 4 transaksi aktif</span>
+            <span class="paging">Sebelumnya <span class="nomor">1</span> Berikutnya</span>
+          </div>
+        </div>
+
+        <div class="kartu" style="margin-top: 24px;">
+          <div class="kartu-kepala">
+            <h3>Pengembalian terakhir</h3>
+            <p class="muted">1 dari 4 transaksi yang sudah dikembalikan pada Oktober 2026.</p>
+          </div>
+          <table>
+            <thead><tr><th>Kode</th><th>Peminjam</th><th>Buku</th><th>Tgl pinjam</th><th>Jatuh tempo</th><th>Tgl kembali</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>PJ-004</td><td>Farhan Akbar</td><td>Laskar Pelangi</td><td>15 Okt 2026</td><td>22 Okt 2026</td><td>22 Okt 2026</td><td><span class="badge">Dikembalikan</span></td></tr>
+            </tbody>
+          </table>
+          <div class="kartu-kaki"><span>Tanggal kembali dicatat saat buku diterima. Transaksi selesai tidak lagi dihitung sebagai pinjaman aktif atau terlambat.</span></div>
+        </div>
+
+        <p class="muted" style="margin-top: 20px;">Ubah untuk koreksi data transaksi. Hapus memerlukan konfirmasi dan penyesuaian stok; riwayat yang sudah selesai tetap disimpan untuk laporan.</p>
+
+      </main>
+
+    </div>
+  </div>
+
+</body>
+</html>

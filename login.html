@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masuk - Perpustakaan Kelas TI-2A</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  <header class="header-publik">
+    <a href="login.html" class="logo">
+      <span class="ikon">▤</span>
+      <span><strong>Perpustakaan</strong><small>KELAS TI–2A</small></span>
+    </a>
+    <div class="nav-publik">
+      <a href="katalog.html">Tampilan Anggota </a>
+      <span>|</span> <span>Belum punya akun?</span> <a href="daftar.html" class="tombol"><b>Daftar anggota</b></a>
+    </div>
+  </header>
+
+  <main class="isi-publik">
+    <div class="login-grid">
+
+
+      <section>
+        <p class="label-kecil">Perpustakaan Kelas TI–2A</p>
+        <h1 class="judul-besar">Selamat datang kembali.</h1>
+        <p class="muted">Masuk untuk mengakses layanan Perpustakaan Kelas TI–2A sesuai hak akses akun Anda.</p>
+
+        <div class="daftar-peran">
+          <div class="peran">
+            <span class="ikon">🎓</span>
+            <div><strong>Anggota / mahasiswa</strong><span class="muted kecil">Akses katalog buku dan informasi ketersediaan.</span></div>
+          </div>
+          <div class="peran">
+            <span class="ikon">📋</span>
+            <div><strong>Petugas perpustakaan</strong><span class="muted kecil">Kelola buku, anggota, peminjaman, pengembalian, dan laporan.</span></div>
+          </div>
+        </div>
+        <p class="muted kecil">Hak akses ditentukan oleh akun yang terdaftar. Tidak perlu memilih peran saat masuk.</p>
+      </section>
+
+      <section>
+        <div class="kartu">
+          <div class="kartu-isi" style="padding: 32px;">
+            <h2>Masuk ke akun Anda</h2>
+            <p class="muted" style="margin: 8px 0 24px;">Gunakan akun anggota atau petugas yang telah terdaftar.</p>
+            <form action="dashboard.html" method="get">
+              <div class="grup">
+                <label for="akun">Email atau NIM</label>
+                <input type="text" id="akun" name="akun" placeholder="Masukkan email atau NIM">
+              </div>
+              <div class="grup">
+                <label for="sandi">Kata sandi</label>
+                <input type="password" id="sandi" name="sandi" placeholder="Masukkan kata sandi">
+              </div>
+              <div class="rincian" style="margin-bottom: 20px;">
+                <label class="centang" for="ingat"><input type="checkbox" id="ingat"> Ingat saya</label>
+                <a href="#"><b>Lupa kata sandi?</b></a>
+              </div>
+              <button type="submit" class="tombol tombol-gelap tombol-penuh">Masuk</button>
+            </form>
+
+            <p class="muted" style="text-align: center; margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--garis);">
+              Belum punya akun? <a href="daftar.html"><b>Daftar anggota</b></a>
+            </p>
+          </div>
+        </div>
+
+        <div class="info" style="margin-top: 16px;">
+          <span>ⓘ</span>
+          <div><strong>Kesulitan masuk?</strong><span class="muted kecil">Hubungi petugas perpustakaan jika lupa kata sandi atau akun Anda belum dapat diakses.</span></div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="footer-publik">
+    <span>© 2026 Perpustakaan Kelas TI–2A</span>
+    <span>Butuh bantuan? Hubungi petugas perpustakaan.</span>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buku - Perpustakaan Kelas TI-2A</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <a href="dashboard.html" class="logo">
+        <span class="ikon">▤</span>
+        <span><strong>Perpustakaan</strong><small>KELAS TI–2A</small></span>
+      </a>
+
+      <p class="judul-menu">Ruang petugas</p>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="buku.html" class="aktif">Buku</a>
+        <a href="anggota.html">Anggota</a>
+        <a href="peminjaman.html">Peminjaman</a>
+        <a href="pengembalian.html">Pengembalian</a>
+        <a href="laporan.html">Laporan</a>
+      </nav>
+
+      <div class="kotak-peran">
+        <strong>Petugas perpustakaan</strong>
+        Kelola buku, anggota, transaksi, dan laporan kelas.
+      </div>
+
+      <p class="semester">Semester ganjil 2026/2027</p>
+    </aside>
+
+    <div class="utama">
+
+      
+      <div class="topbar">
+        <span class="muted">Ruang petugas / Buku</span>
+        <div class="kanan">
+          <span class="muted">Kamis, 22 Oktober 2026</span>
+          <span class="pengguna"><span class="avatar">RP</span> Rani · Petugas</span>
+        </div>
+      </div>
+
+      <main class="konten">
+
+        <div class="judul-halaman">
+          <div>
+            <h1>Buku</h1>
+            <p class="muted">Kelola informasi, kategori, dan jumlah stok koleksi perpustakaan.</p>
+          </div>
+          <a href="buku-form.html" class="tombol tombol-gelap">+ Tambah buku</a>
+        </div>
+
+        <div class="ringkas-baris">
+          <b>6 judul buku</b><span>15 eksemplar total</span><span>11 tersedia</span><span>4 dipinjam</span>
+        </div>
+
+        <div class="kartu">
+          <div class="kartu-isi" style="padding-bottom: 8px;">
+            <form class="pencarian">
+              <input type="text" placeholder="🔍 Cari judul, penulis, kategori, atau kode buku...">
+              <select><option>Semua kategori</option><option>Fiksi</option><option>Pengembangan diri</option><option>Teknologi</option><option>Sejarah</option></select>
+              <select><option>Semua stok</option><option>Tersedia</option><option>Stok habis</option></select>
+            </form>
+          </div>
+          <table>
+            <thead>
+              <tr><th>Kode</th><th>Judul / penulis</th><th>Kategori</th><th>Tahun</th><th>Stok</th><th>Dipinjam</th><th>Tersedia</th><th>Status</th><th>Aksi</th></tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>BK-001</td>
+              <td><b>Laskar Pelangi</b><small>Andrea Hirata</small></td>
+              <td>Fiksi</td><td>2005</td><td>4</td><td>1</td><td>3</td>
+              <td><span class="badge">Tersedia</span></td>
+              <td class="aksi"><a href="buku-form.html"><b>Ubah</b></a><a href="#" class="hapus">Hapus</a></td>
+            </tr>
+            <tr>
+              <td>BK-002</td>
+              <td><b>Bumi Manusia</b><small>Pramoedya Ananta Toer</small></td>
+              <td>Fiksi</td><td>1980</td><td>3</td><td>1</td><td>2</td>
+              <td><span class="badge">Tersedia</span></td>
+              <td class="aksi"><a href="buku-form.html"><b>Ubah</b></a><a href="#" class="hapus">Hapus</a></td>
+            </tr>
+            <tr>
+              <td>BK-003</td>
+              <td><b>Filosofi Teras</b><small>Henry Manampiring</small></td>
+              <td>Pengembangan diri</td><td>2018</td><td>2</td><td>0</td><td>2</td>
+              <td><span class="badge">Tersedia</span></td>
+              <td class="aksi"><a href="buku-form.html"><b>Ubah</b></a><a href="#" class="hapus">Hapus</a></td>
+            </tr>
+            <tr>
+              <td>BK-004</td>
+              <td><b>Atomic Habits</b><small>James Clear</small></td>
+              <td>Pengembangan diri</td><td>2018</td><td>2</td><td>1</td><td>1</td>
+              <td><span class="badge">Tersedia</span></td>
+              <td class="aksi"><a href="buku-form.html"><b>Ubah</b></a><a href="#" class="hapus">Hapus</a></td>
+            </tr>
+            <tr>
+              <td>BK-005</td>
+              <td><b>Dasar Pemrograman Python</b><small>Budi Raharjo</small></td>
+              <td>Teknologi</td><td>2018</td><td>1</td><td>1</td><td>0</td>
+              <td><span class="badge penting">Stok habis</span></td>
+              <td class="aksi"><a href="buku-form.html"><b>Ubah</b></a><a href="#" class="hapus">Hapus</a></td>
+            </tr>
+            <tr>
+              <td>BK-006</td>
+              <td><b>Sejarah Indonesia</b><small>M. C. Ricklefs</small></td>
+              <td>Sejarah</td><td>2008</td><td>3</td><td>0</td><td>3</td>
+              <td><span class="badge">Tersedia</span></td>
+              <td class="aksi"><a href="buku-form.html"><b>Ubah</b></a><a href="#" class="hapus">Hapus</a></td>
+            </tr>
+            </tbody>
+          </table>
+          <div class="kartu-kaki">
+            <span>Menampilkan 1–6 dari 6 judul buku</span>
+            <span class="paging">Sebelumnya <span class="nomor">1</span> Berikutnya</span>
+          </div>
+        </div>
+
+        <div class="sejajar">
+          <div class="kartu">
+            <div class="kartu-kepala"><h3>Tentang jumlah stok</h3></div>
+            <div class="kartu-isi muted">Stok adalah seluruh eksemplar yang dimiliki kelas. Stok tersedia dihitung otomatis dan bertambah kembali setelah pengembalian dicatat.</div>
+          </div>
+          <div class="kartu">
+            <div class="kartu-kepala"><h3>Mengubah atau menghapus buku</h3></div>
+            <div class="kartu-isi muted">Pilih Ubah untuk menyunting data. Buku dengan pinjaman aktif tidak dapat dihapus. Tindakan Hapus memerlukan konfirmasi petugas.</div>
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laporan - Perpustakaan Kelas TI-2A</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="layout">
+
+    <aside class="sidebar">
+      <a href="dashboard.html" class="logo">
+        <span class="ikon">▤</span>
+        <span><strong>Perpustakaan</strong><small>KELAS TI–2A</small></span>
+      </a>
+
+      <p class="judul-menu">Ruang petugas</p>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="buku.html">Buku</a>
+        <a href="anggota.html">Anggota</a>
+        <a href="peminjaman.html">Peminjaman</a>
+        <a href="pengembalian.html">Pengembalian</a>
+        <a href="laporan.html" class="aktif">Laporan</a>
+      </nav>
+
+      <div class="kotak-peran">
+        <strong>Petugas perpustakaan</strong>
+        Kelola buku, anggota, transaksi, dan laporan kelas.
+      </div>
+
+      <p class="semester">Semester ganjil 2026/2027</p>
+    </aside>
+
+    <div class="utama">
+
+
+      <div class="topbar">
+        <span class="muted">Ruang petugas / Laporan</span>
+        <div class="kanan">
+          <span class="muted">Kamis, 22 Oktober 2026</span>
+          <span class="pengguna"><span class="avatar">RP</span> Rani · Petugas</span>
+        </div>
+      </div>
+
+      <main class="konten">
+
+        <div class="judul-halaman">
+          <div>
+            <h1>Laporan</h1>
+            <p class="muted">Rekap peminjaman, pengembalian, dan buku paling sering dipinjam.</p>
+          </div>
+          <a href="#" class="tombol" onclick="window.print(); return false;">🖶 Cetak laporan</a>
+        </div>
+
+        <div class="kartu" style="margin-bottom: 20px;">
+          <form class="kartu-isi" style="display: flex; gap: 16px; align-items: flex-end; padding: 20px;">
+            <div style="flex: 1;"><label for="mulai">Tanggal mulai</label><input type="date" id="mulai" value="2026-10-01"></div>
+            <div style="flex: 1;"><label for="akhir">Tanggal akhir</label><input type="date" id="akhir" value="2026-10-22"></div>
+            <div style="flex: 1;"><label for="cepat">Periode cepat</label><select id="cepat"><option>Bulan ini</option><option>7 hari terakhir</option><option>Bulan lalu</option></select></div>
+            <button type="submit" class="tombol tombol-gelap" style="padding: 12px 16px;">Tampilkan laporan</button>
+            <button type="reset" class="tombol" style="padding: 12px 16px;">Atur ulang</button>
+          </form>
+        </div>
+
+        <div class="statistik">
+          <div class="kotak"><p class="muted">Total peminjaman</p><p class="angka">8</p><p class="muted kecil">8 eksemplar · 1–22 Oktober 2026</p></div>
+          <div class="kotak"><p class="muted">Pinjaman aktif</p><p class="angka">4</p><p class="muted kecil">Belum kembali per 22 Oktober</p></div>
+          <div class="kotak"><p class="muted">Sudah dikembalikan</p><p class="angka">4</p><p class="muted kecil">Seluruhnya kembali tepat waktu</p></div>
+          <div class="kotak"><p class="muted">Terlambat</p><p class="angka">1</p><p class="muted kecil">Bagian dari 4 pinjaman aktif</p></div>
+        </div>
+
+        <div class="dua-kolom">
+
+          <div class="kartu">
+            <div class="kartu-kepala">
+              <h3>Rekap transaksi</h3>
+              <p class="muted">Periode 1–22 Oktober 2026 · 4 aktif dan 4 selesai</p>
+            </div>
+            <table>
+              <thead><tr><th>Kode</th><th>Peminjam / buku</th><th>Pinjam</th><th>Kembali</th><th>Status</th></tr></thead>
+              <tbody>
+            <tr><td>PJ-008</td><td>Citra Nabila<small>Laskar Pelangi</small></td><td>21 Okt</td><td>—</td><td><span class="badge">Dipinjam</span></td></tr>
+            <tr><td>PJ-007</td><td>Dimas Saputra<small>Atomic Habits</small></td><td>20 Okt</td><td>—</td><td><span class="badge">Dipinjam</span></td></tr>
+            <tr><td>PJ-006</td><td>Bima Pratama<small>Dasar Pemrograman Python</small></td><td>19 Okt</td><td>—</td><td><span class="badge">Dipinjam</span></td></tr>
+            <tr><td>PJ-005</td><td>Alya Putri<small>Bumi Manusia</small></td><td>12 Okt</td><td>—</td><td><span class="badge penting">Terlambat</span></td></tr>
+            <tr><td>PJ-004</td><td>Farhan Akbar<small>Laskar Pelangi</small></td><td>15 Okt</td><td>22 Okt</td><td><span class="badge">Dikembalikan</span></td></tr>
+            <tr><td>PJ-003</td><td>Eka Lestari<small>Filosofi Teras</small></td><td>10 Okt</td><td>16 Okt</td><td><span class="badge">Dikembalikan</span></td></tr>
+            <tr><td>PJ-002</td><td>Citra Nabila<small>Sejarah Indonesia</small></td><td>07 Okt</td><td>14 Okt</td><td><span class="badge">Dikembalikan</span></td></tr>
+            <tr><td>PJ-001</td><td>Alya Putri<small>Laskar Pelangi</small></td><td>02 Okt</td><td>09 Okt</td><td><span class="badge">Dikembalikan</span></td></tr>
+              </tbody>
+            </table>
+            <div class="kartu-kaki"><span>Rekap berdasarkan tanggal pinjam. Tanda — berarti buku belum kembali. Status ditampilkan per 22 Oktober 2026.</span></div>
+          </div>
+
+          <div class="tumpuk">
+            <div class="kartu">
+              <div class="kartu-kepala">
+                <h3>Buku paling sering dipinjam</h3>
+                <p class="muted">Frekuensi peminjaman pada periode terpilih</p>
+              </div>
+              <div class="kartu-isi">
+              <div class="item-batang">
+                <div class="atas"><span>Laskar Pelangi</span><b>3 kali</b></div>
+                <small>BK-001</small>
+                <div class="batang-wadah"><div class="batang" style="width: 100%;"></div></div>
+              </div>
+              <div class="item-batang">
+                <div class="atas"><span>Bumi Manusia</span><b>1 kali</b></div>
+                <small>BK-002</small>
+                <div class="batang-wadah"><div class="batang" style="width: 33%;"></div></div>
+              </div>
+              <div class="item-batang">
+                <div class="atas"><span>Filosofi Teras</span><b>1 kali</b></div>
+                <small>BK-003</small>
+                <div class="batang-wadah"><div class="batang" style="width: 33%;"></div></div>
+              </div>
+              <div class="item-batang">
+                <div class="atas"><span>Atomic Habits</span><b>1 kali</b></div>
+                <small>BK-004</small>
+                <div class="batang-wadah"><div class="batang" style="width: 33%;"></div></div>
+              </div>
+              <div class="item-batang">
+                <div class="atas"><span>Dasar Pemrograman Python</span><b>1 kali</b></div>
+                <small>BK-005</small>
+                <div class="batang-wadah"><div class="batang" style="width: 33%;"></div></div>
+              </div>
+              <div class="item-batang">
+                <div class="atas"><span>Sejarah Indonesia</span><b>1 kali</b></div>
+                <small>BK-006</small>
+                <div class="batang-wadah"><div class="batang" style="width: 33%;"></div></div>
+              </div>
+              </div>
+            </div>
+            <div class="kartu">
+              <div class="kartu-kepala"><h3>Ringkasan periode</h3></div>
+              <div class="kartu-isi muted" style="line-height: 1.5;">
+                <p style="margin-bottom: 12px;">Laskar Pelangi paling sering dipinjam: 3 dari 8 transaksi. Lima judul lainnya masing-masing dipinjam 1 kali.</p>
+                <p>Koleksi saat ini: 15 eksemplar = 11 tersedia + 4 dipinjam. PJ-005 terlambat 3 hari; belum ada pengembalian terlambat.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </main>
+
+    </div>
+  </div>
+
+</body>
+</html>

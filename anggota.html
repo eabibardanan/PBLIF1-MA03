@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anggota - Perpustakaan Kelas TI-2A</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <a href="dashboard.html" class="logo">
+        <span class="ikon">▤</span>
+        <span><strong>Perpustakaan</strong><small>KELAS TI–2A</small></span>
+      </a>
+
+      <p class="judul-menu">Ruang petugas</p>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="buku.html">Buku</a>
+        <a href="anggota.html" class="aktif">Anggota</a>
+        <a href="peminjaman.html">Peminjaman</a>
+        <a href="pengembalian.html">Pengembalian</a>
+        <a href="laporan.html">Laporan</a>
+      </nav>
+
+      <div class="kotak-peran">
+        <strong>Petugas perpustakaan</strong>
+        Kelola buku, anggota, transaksi, dan laporan kelas.
+      </div>
+
+      <p class="semester">Semester ganjil 2026/2027</p>
+    </aside>
+
+    <div class="utama">
+
+      <div class="topbar">
+        <span class="muted">Ruang petugas / Anggota</span>
+        <div class="kanan">
+          <span class="muted">Kamis, 22 Oktober 2026</span>
+          <span class="pengguna"><span class="avatar">RP</span> Rani · Petugas</span>
+        </div>
+      </div>
+
+      <main class="konten">
+
+        <div class="judul-halaman">
+          <div>
+            <h1>Anggota</h1>
+            <p class="muted">6 anggota terdaftar · Kelola identitas dan kontak peminjam kelas TI–2A.</p>
+          </div>
+          <a href="anggota.html" class="tombol tombol-gelap">+ Tambah anggota</a>
+        </div>
+
+        <div class="dua-kolom lebar-kanan-310">
+
+          <div>
+            <div class="kartu">
+              <div class="kartu-kepala">
+                <h3>Data anggota</h3>
+                <p class="muted">Pilih Ubah pada baris untuk membuka form di samping.</p>
+              </div>
+              <div class="kartu-isi" style="padding-bottom: 8px;">
+                <form class="pencarian">
+                  <input type="text" placeholder="🔍 Cari nama, NIM, atau kode anggota...">
+                  <select><option>Kelas TI–2A</option></select>
+                </form>
+              </div>
+              <table>
+                <thead><tr><th>Kode</th><th>Nama anggota</th><th>NIM</th><th>Pinjaman</th><th>Aksi</th></tr></thead>
+                <tbody>
+            <tr>
+              <td>AG-001</td><td>Alya Putri</td><td>260101001</td><td>1</td>
+              <td class="aksi"><a href="anggota.html"><b>Ubah</b></a><a href="#" class="hapus">Hapus</a></td>
+            </tr>
+            <tr>
+              <td>AG-002</td><td>Bima Pratama</td><td>260101002</td><td>1</td>
+              <td class="aksi"><a href="anggota.html"><b>Ubah</b></a><a href="#" class="hapus">Hapus</a></td>
+            </tr>
+            <tr>
+              <td>AG-003</td><td>Citra Nabila</td><td>260101003</td><td>1</td>
+              <td class="aksi"><a href="anggota.html"><b>Ubah</b></a><a href="#" class="hapus">Hapus</a></td>
+            </tr>
+            <tr>
+              <td>AG-004</td><td>Dimas Saputra</td><td>260101004</td><td>1</td>
+              <td class="aksi"><a href="anggota.html"><b>Ubah</b></a><a href="#" class="hapus">Hapus</a></td>
+            </tr>
+            <tr class="dipilih">
+              <td>AG-005</td><td>Eka Lestari</td><td>260101005</td><td>0</td>
+              <td class="aksi"><a href="anggota.html"><b>Ubah</b></a><a href="#" class="hapus">Hapus</a></td>
+            </tr>
+            <tr>
+              <td>AG-006</td><td>Farhan Akbar</td><td>260101006</td><td>0</td>
+              <td class="aksi"><a href="anggota.html"><b>Ubah</b></a><a href="#" class="hapus">Hapus</a></td>
+            </tr>
+                </tbody>
+              </table>
+              <div class="kartu-kaki">
+                <span>1–6 dari 6 anggota</span>
+                <span class="paging">Sebelumnya <span class="nomor">1</span> Berikutnya</span>
+              </div>
+            </div>
+
+            <div class="info" style="margin-top: 20px;">
+              <span>ⓘ</span>
+              <div>
+                <strong>Aturan penghapusan anggota</strong>
+                <span class="muted">Anggota yang masih memiliki pinjaman aktif tidak dapat dihapus. Hapus hanya tersedia setelah semua buku dikembalikan dan petugas mengonfirmasi tindakan.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="kartu">
+            <div class="kartu-kepala">
+              <h3>Edit anggota</h3>
+              <p class="muted">AG-005 · Eka Lestari</p>
+            </div>
+            <form action="anggota.html" method="get">
+              <div class="kartu-isi">
+                <div class="baris-2 grup" style="grid-template-columns: 1fr 1fr; gap: 12px;">
+                  <div><label for="kode">Kode anggota</label><input type="text" id="kode" value="AG-005" readonly></div>
+                  <div><label for="kelas">Kelas *</label><select id="kelas"><option>TI–2A</option></select></div>
+                </div>
+                <div class="grup"><label for="nama">Nama lengkap *</label><input type="text" id="nama" value="Eka Lestari" required></div>
+                <div class="grup">
+                  <label for="nim">NIM *</label>
+                  <input type="text" id="nim" value="260101005" required>
+                  <p class="bantuan">NIM harus unik untuk setiap anggota.</p>
+                </div>
+                <div class="grup"><label for="telp">Nomor telepon *</label><input type="tel" id="telp" value="0812 3400 1005" required></div>
+                <div class="grup"><label for="email">Email</label><input type="email" id="email" value="eka.lestari@kampus.ac.id"></div>
+                <div class="baris-tombol" style="justify-content: flex-start;">
+                  <a href="anggota.html" class="tombol">Batal</a>
+                  <button type="submit" class="tombol tombol-gelap">Simpan perubahan</button>
+                </div>
+                <p class="muted kecil" style="margin-top: 18px; line-height: 1.5;">* Wajib diisi. Tambah anggota membuka form kosong dengan kode otomatis AG-007.</p>
+              </div>
+            </form>
+          </div>
+
+        </div>
+
+      </main>
+
+    </div>
+  </div>
+
+</body>
+</html>

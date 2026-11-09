@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Perpustakaan Kelas TI-2A</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="layout">
+
+    
+    <aside class="sidebar">
+      <a href="dashboard.html" class="logo">
+        <span class="ikon">▤</span>
+        <span><strong>Perpustakaan</strong><small>KELAS TI–2A</small></span>
+      </a>
+
+      <p class="judul-menu">Ruang petugas</p>
+      <nav>
+        <a href="dashboard.html" class="aktif">Dashboard</a>
+        <a href="buku.html">Buku</a>
+        <a href="anggota.html">Anggota</a>
+        <a href="peminjaman.html">Peminjaman</a>
+        <a href="pengembalian.html">Pengembalian</a>
+        <a href="laporan.html">Laporan</a>
+      </nav>
+
+      <div class="kotak-peran">
+        <strong>Petugas perpustakaan</strong>
+        Kelola buku, anggota, transaksi, dan laporan kelas.
+      </div>
+
+      <p class="semester">Semester ganjil 2026/2027</p>
+    </aside>
+
+    
+    <div class="utama">
+
+      
+      <div class="topbar">
+        <span class="muted">Ruang petugas / Dashboard</span>
+        <div class="kanan">
+          <span class="muted">Kamis, 22 Oktober 2026</span>
+          <span class="pengguna"><span class="avatar">AP</span> Abib · Petugas</span>
+        </div>
+      </div>
+
+      <main class="konten">
+
+        <div class="judul-halaman">
+          <div>
+            <h1>Dashboard petugas</h1>
+            <p class="muted">Ringkasan koleksi dan aktivitas peminjaman perpustakaan kelas TI–2A.</p>
+          </div>
+          <a href="peminjaman.html" class="tombol tombol-gelap">+ Catat peminjaman</a>
+        </div>
+
+        
+        <div class="statistik">
+          <div class="kotak"><p class="muted">Total buku</p><p class="angka">15</p><p class="muted kecil">6 judul · 11 eksemplar tersedia</p></div>
+          <div class="kotak"><p class="muted">Anggota terdaftar</p><p class="angka">6</p><p class="muted kecil">Seluruh anggota kelas TI–2A</p></div>
+          <div class="kotak"><p class="muted">Buku dipinjam</p><p class="angka">4</p><p class="muted kecil">4 transaksi aktif · 1 buku per transaksi</p></div>
+          <div class="kotak"><p class="muted">Transaksi terlambat</p><p class="angka">2</p><p class="muted kecil">Termasuk dalam 4 transaksi aktif</p></div>
+        </div>
+
+      
+        <div class="info">
+          <span>⚠</span>
+          <div>
+            <strong>2 peminjaman melewati jatuh tempo</strong>
+            <span class="muted">PJ-005 · Alya Putri · Bumi Manusia — jatuh tempo 19 Oktober 2026, terlambat 3 hari.</span>
+            <p></p>
+             <span class="muted">PJ-006 · Bima Pratama · Dasar Pemrograman Python — jatuh tempo 21 Oktober 2026, terlambat 1 hari.</span>
+          </div>
+        </div>
+
+        
+        <div class="kartu">
+          <div class="kartu-kepala">
+            <h3>Peminjaman aktif</h3>
+            <p class="muted">Pantau buku yang belum dikembalikan per 22 Oktober 2026.</p>
+          </div>
+          <table>
+            <thead>
+              <tr><th>Kode transaksi</th><th>Peminjam</th><th>Buku</th><th>Tgl pinjam</th><th>Jatuh tempo</th><th>Status</th><th>Aksi</th></tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>PJ-008</td><td>Citra Nabila</td><td>Laskar Pelangi</td><td>21 Okt 2026</td><td>28 Okt 2026</td>
+              <td><span class="badge">Dipinjam</span></td>
+              <td><a href="pengembalian.html">Lihat detail</a></td>
+            </tr>
+            <tr>
+              <td>PJ-007</td><td>Dimas Saputra</td><td>Atomic Habits</td><td>20 Okt 2026</td><td>27 Okt 2026</td>
+              <td><span class="badge">Dipinjam</span></td>
+              <td><a href="pengembalian.html">Lihat detail</a></td>
+            </tr>
+            <tr>
+              <td>PJ-006</td><td>Bima Pratama</td><td>Dasar Pemrograman Python</td><td>15 Okt 2026</td><td>21 Okt 2026</td>
+              <td><span class="badge penting">Terlambat</span></td>
+              <td><a href="pengembalian.html">Lihat detail</a></td>
+            </tr>
+            <tr>
+              <td>PJ-005</td><td>Alya Putri</td><td>Bumi Manusia</td><td>12 Okt 2026</td><td>19 Okt 2026</td>
+              <td><span class="badge penting">Terlambat</span></td>
+              <td><a href="pengembalian.html">Lihat detail</a></td>
+            </tr>
+            </tbody>
+          </table>
+          <div class="kartu-kaki">
+            <span>Oktober 2026: 8 peminjaman · 4 pengembalian</span>
+            <a href="pengembalian.html" class="tombol">→ Lihat pengembalian</a>
+          </div>
+        </div>
+
+        <p class="muted" style="margin-top: 20px;">Data diperbarui setelah transaksi disimpan. Stok tersedia = jumlah stok koleksi dikurangi buku yang masih dipinjam.</p>
+
+      </main>
+
+    </div>
+  </div>
+
+</body>
+</html>

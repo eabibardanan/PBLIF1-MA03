@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Buku - Perpustakaan Kelas TI-2A</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="layout">
+
+    <aside class="sidebar">
+      <a href="dashboard.html" class="logo">
+        <span class="ikon">▤</span>
+        <span><strong>Perpustakaan</strong><small>KELAS TI–2A</small></span>
+      </a>
+
+      <p class="judul-menu">Ruang petugas</p>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="buku.html" class="aktif">Buku</a>
+        <a href="anggota.html">Anggota</a>
+        <a href="peminjaman.html">Peminjaman</a>
+        <a href="pengembalian.html">Pengembalian</a>
+        <a href="laporan.html">Laporan</a>
+      </nav>
+
+      <div class="kotak-peran">
+        <strong>Petugas perpustakaan</strong>
+        Kelola buku, anggota, transaksi, dan laporan kelas.
+      </div>
+
+      <p class="semester">Semester ganjil 2026/2027</p>
+    </aside>
+
+    <div class="utama">
+
+      <div class="topbar">
+        <span class="muted">Ruang petugas / Buku</span>
+        <div class="kanan">
+          <span class="muted">Kamis, 22 Oktober 2026</span>
+          <span class="pengguna"><span class="avatar">RP</span> Rani · Petugas</span>
+        </div>
+      </div>
+
+      <main class="konten">
+
+        <div class="judul-halaman">
+          <div>
+            <h1>Tambah / edit buku</h1>
+            <p class="muted">Buku / BK-001 / Edit informasi koleksi</p>
+          </div>
+          <a href="buku.html" class="tombol">← Kembali ke buku</a>
+        </div>
+
+        <div class="dua-kolom">
+          <div class="kartu">
+            <div class="kartu-kepala tab" style="margin: 0; padding: 14px 18px;">
+              <a href="buku-form.html">Tambah buku</a>
+              <a href="buku-form.html" class="aktif">Edit buku</a>
+            </div>
+
+            <form action="buku.html" method="get">
+              <div class="kartu-isi">
+                <h3 style="margin-bottom: 6px;">Edit buku · Laskar Pelangi</h3>
+                <p class="muted" style="margin-bottom: 22px;">Perbarui data di bawah. Tanda * menunjukkan isian wajib.</p>
+
+                <div class="baris-2 grup">
+                  <div>
+                    <label for="kode">Kode buku *</label>
+                    <input type="text" id="kode" value="BK-001" readonly>
+                    <p class="bantuan">Kode unik tidak dapat diubah.</p>
+                  </div>
+                  <div>
+                    <label for="kategori">Kategori *</label>
+                    <select id="kategori">
+                      <option selected>Fiksi</option><option>Pengembangan diri</option><option>Teknologi</option><option>Sejarah</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="grup">
+                  <label for="judul">Judul buku *</label>
+                  <input type="text" id="judul" value="Laskar Pelangi" required>
+                </div>
+
+                <div class="grup">
+                  <label for="penulis">Penulis *</label>
+                  <input type="text" id="penulis" value="Andrea Hirata" required>
+                </div>
+
+                <div class="baris-2 grup">
+                  <div>
+                    <label for="tahun">Tahun terbit *</label>
+                    <input type="text" id="tahun" value="2005" pattern="[0-9]{4}" required>
+                    <p class="bantuan">Gunakan format 4 digit.</p>
+                  </div>
+                  <div>
+                    <label for="stok">Jumlah stok *</label>
+                    <input type="number" id="stok" value="4" min="1" required>
+                    <p class="bantuan">Jumlah seluruh eksemplar, bukan sisa tersedia.</p>
+                  </div>
+                </div>
+
+                <div class="info">
+                  <span>ⓘ</span>
+                  <div>
+                    <strong>Validasi stok</strong>
+                    <span class="muted kecil">1 eksemplar masih dipinjam. Jumlah stok minimal 1 dan harus berupa bilangan bulat. Stok tersedia saat ini: 4 − 1 = 3.</span>
+                  </div>
+                </div>
+              </div>
+              <div class="kartu-kaki">
+                <span>Perubahan belum disimpan.</span>
+                <span class="baris-tombol">
+                  <a href="buku.html" class="tombol">Batal</a>
+                  <button type="submit" class="tombol tombol-gelap">Simpan perubahan</button>
+                </span>
+              </div>
+            </form>
+          </div>
+
+
+          <div class="tumpuk">
+            <div class="kartu">
+              <div class="kartu-kepala"><h3>Ringkasan buku</h3></div>
+              <div class="kartu-isi">
+                <p style="margin-bottom: 16px;"><span class="badge">Tersedia</span></p>
+                <div class="rincian"><span class="muted">Jumlah stok</span><b>4 eksemplar</b></div>
+                <div class="rincian"><span class="muted">Sedang dipinjam</span><b>1 eksemplar</b></div>
+                <div class="rincian"><span class="muted">Tersedia</span><b>3 eksemplar</b></div>
+              </div>
+            </div>
+            <div class="kartu">
+              <div class="kartu-kepala"><h3>Saat menambah buku</h3></div>
+              <div class="kartu-isi muted kecil">
+                <p style="margin-bottom: 12px; line-height: 1.5;">Pilih Tambah buku untuk membuka isian kosong. Kode berikutnya adalah BK-007 dan dibuat otomatis oleh sistem.</p>
+                <p style="line-height: 1.5;">Lengkapi judul, penulis, kategori, tahun terbit, dan jumlah stok. Tombol Simpan buku aktif setelah semua isian wajib valid.</p>
+              </div>
+            </div>
+            <div class="info">
+              <span>ⓘ</span>
+              <div>
+                <strong>Data tetap konsisten</strong>
+                <span class="muted kecil">Perubahan stok tidak menghapus riwayat transaksi. Buku dengan pinjaman aktif tidak dapat dihapus.</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </main>
+
+    </div>
+  </div>
+
+</body>
+</html>
